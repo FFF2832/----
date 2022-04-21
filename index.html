@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Flickr</title>
+  </head>
+  <body><svg width="0" height="0" style="position:absolute">
+    <symbol viewBox="0 0 204 45" id="icon-flickr_logo_dots"><g fill="none" fill-rule="evenodd"><path fill="#FF0084" d="M35 33c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10s-10 4.478-10 10c0 5.523 4.477 10 10 10"></path><path fill="#0063DC" d="M10 33c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10S0 17.478 0 23c0 5.523 4.477 10 10 10"></path><path fill="#FFF" d="M134.725 13.31c3.121 0 5.896.53 8.264 1.691l-.754 7.67c-1.909-1.16-3.809-1.68-6.294-1.68-4.508 0-7.972 3.14-7.972 8.371 0 4.818 4.041 7.96 8.55 7.96 2.368 0 4.736-.522 6.47-1.452l.23 7.79c-2.598.87-5.718 1.34-8.494 1.34-9.933 0-17.5-5.819-17.5-15.818 0-10.06 7.567-15.872 17.5-15.872zm65.756 0c1.21 0 2.483.172 3.52.352l-.519 8.719c-1.155-.352-2.309-.352-3.523-.352-4.852 0-7.57 3.552-7.57 9.483V44.3h-10.39V14.01h9.471v5.582h.112c1.793-3.841 4.394-6.281 8.899-6.281zM157.947.692v26.05h.112l8.666-12.73h11.377l-10.45 13.898 11.316 16.39H166.38l-8.32-15h-.112v15H147.55V.691h10.398zm-59.498 0V44.3H88.051V.691h10.4zm15.49 13.32v30.288h-10.392V14.01h10.392zM78.807 0c2.254 0 3.988.35 5.314.58l-.637 7.21c-.864-.292-1.73-.47-3.293-.47-2.655 0-3.69 1.861-3.69 4.831v1.858h7.391v7.32H76.5V44.3H66.1V21.33h-6.12v-7.32h6.296v-1.858C66.276 3.142 70.491 0 78.807 0zm35.133 1.39v7.68h-10.392V1.39h10.392z"></path></g></symbol>
+  </svg>
+  <nav class="navbar navbar-expand-lg bg-my1 hz-50 nav1 position-sticky  top-0  z1">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><svg class="icon icon-flickr_logo_dots" id="yui_3_16_0_1_1646555441080_17669"><use xlink:href="#icon-flickr_logo_dots" id="yui_3_16_0_1_1646555441080_17672"></use></svg></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+          
+          <li class="nav-item nav-item-1 dropdown">
+            <a class="nav-link text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              發掘
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">最新相片</a></li>
+              <li><a class="dropdown-item" href="#">熱門相片</a></li>
+              <li><a class="dropdown-item" href="#">活動</a></li>
+              <li><a class="dropdown-item" href="#">公眾相簿計畫</a></li>
+              <li><a class="dropdown-item" href="#">Flickr 博覽館</a></li>
+              <li><a class="dropdown-item" href="#">世界地圖</a></li>
+              <li><a class="dropdown-item" href="#">相機搜尋器</a></li>
+              <li><a class="dropdown-item" href="#">Flickr Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-item-1 dropdown">
+            <a class="nav-link text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              印刷品
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">印刷品和掛牆藝術</a></li>
+              <li><a class="dropdown-item" href="#">實體相簿</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">購買Pro</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+            <div class="group position-relative pe-3">
+              <i class="fa fa-search position-absolute mt-2 ms-1 hz-20" aria-hidden="true"></i>
+              <input class="form-control bg-my2 fz-14 rounded-1 me-2 ps-4" type="search" placeholder="相片、人物或群組" aria-label="Search">
+            </div>
+            <i class="fa fa-cloud-upload text-white fz-28 mt-1" aria-hidden="true"></i>
+            <button type="button" class="btn text-white wz-85 me-2">登入</button>
+            <button type="button" class="btn btn-info wz-85">註冊</button>
+          </form>
+      </div>
+    </div>
+  </nav>
+  <header class="hz-250">
+    <div class="container h-100 pb-3">
+      <div class="row h-100 d-flex align-items-end ">
+        <div class="col-1">
+          <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="" class="hz-100 rounded-circle">
+        </div>
+        <div class="col-9">
+          <div class="intro1 d-flex align-items-center ">
+            <span class="fz-40 ms-1 text-light me-5">Leslie</span>
+            <button type="button" class="btn btn-light ms-5 ">追蹤</button>
+            <button type="button" class="btn btn-outline-light ms-3  ">. . .</button>
+          </div>
+          <div class="intro2 d-flex align-items-center">
+            <i class="fa fa-gift color-light fz-28 " aria-hidden="true"></i><a href="#" class="text-light nonedecorate ms-2"> 送贈Pro</a>
+            <span class=" text-light  ms-3"> 1.8k 追蹤者</span>
+            <a href="#" class=" text-light nonedecorate ms-3">正在追蹤210個人</a>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="intro3 d-flex" >
+            <span class=" text-light   "> 14,976 張相片</span>
+            <span class=" text-light ms-1 "> 已加入 2010</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <aside class="bg-white border border-start-0 border-end-0 position-sticky   topz-50 z2">
+    <div class="container">
+      <ul class="nav">
+       
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">關於</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">所有相片</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-dark" aria-current="page" href="#">相簿</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">最愛</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">博覽館</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">群組</a>
+        </li>
+       
+      </ul>
+    </div>
+   
+  </aside>
+   
+  <section class="min-hz-500">
+    <div class="container">
+      <div class="row" id="section">
+         
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark ">
+      <div class="container ">
+        <ul class="nav d-flex justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">關於</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">工作機會</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">開發人員</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">指南</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">服務中心</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">檢舉濫用</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">說明討論</a>
+          </li>
+          <li class="nav-item nav-item-1 dropdown">
+            <a class="nav-link text-white " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              繁體中文
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Deutsch</a></li>
+              <li><a class="dropdown-item" href="#">Italiano</a></li>
+              <li><a class="dropdown-item" href="#">Bahasa Indoneisa</a></li>
+              <li><a class="dropdown-item" href="#">Flickr 博覽館</a></li>
+              <li><a class="dropdown-item" href="#">世界地圖</a></li>
+              <li><a class="dropdown-item" href="#">相機搜尋器</a></li>
+              <li><a class="dropdown-item" href="#">Flickr Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav d-flex justify-content-flexstart">
+        
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">隱私政策</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">服務條款</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">Cookies</a>
+          </li>
+         
+        </ul>
+      </div>
+  </footer>
+  <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/step1.js"></script>
+  </body>
+</html>
+
+<!-- <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mb-3">
+            <div class="img position-absolute img1 ">
+              <a href="step5.html?110919030"> <img src="image/1.jpg" alt="" class=" img-fluid "> </a>
+             
+            </div>
+            <info class="position-absolute">1</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img2 h-100 w-100  object-fit-cover ">
+              <img src="image/2.jpg" alt="" class=" h-100 w-100">
+            </div>
+            <info class="position-absolute">2</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img3">
+              <img src="image/3.jpg" alt="" class=" img-fluid ">
+            </div>
+            <info class="position-absolute">3</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img4 ">
+              <img src="image/4.jpg" alt="" class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">4</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 mt-3">
+            <div class="img position-absolute img5">
+              <img src="image/5.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">5</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img6">
+              <img src="image/6.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">6</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img7">
+              <img src="image/7.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">7</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img8">
+              <img src="image/8.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">8</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img9">
+              <img src="image/9.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">9</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img10">
+              <img src="image/10.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">10</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img11">
+              <img src="image/11.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">11</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3">
+            <div class="img position-absolute img12">
+              <img src="image/12.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">12</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img13">
+              <img src="image/13.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">13</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img14">
+              <img src="image/14.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">14</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img15">
+              <img src="image/15.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">15</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img16">
+              <img src="image/16.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">16</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img17">
+              <img src="image/17.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">17</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img18">
+              <img src="image/18.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">18</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img19">
+              <img src="image/19.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">19</info>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box position-relative hz-200 pt-3 mt-3">
+            <div class="img position-absolute img20">
+              <img src="image/20.jpg" alt=""  class="  h-100 w-100 ">
+            </div>
+            <info class="position-absolute">20</info>
+          </div>
+        </div> -->
