@@ -34,11 +34,11 @@ for(let i=0;i< idAry.length;i++){
             // let id =data.data.imgurl;
             let NAME_HERE =idAry[i];
             let photoNum =data.data.photoNum;
-            let viewnum =data.data.viewnum;
+            let viewNum =data.data.viewNum;
             
             // let info=data.info;
           
-            let content2 =t01(id,NAME_HERE,photoNum,viewnum);
+            let content2 =t01(id,NAME_HERE,photoNum,viewNum);
             $('#section').append(content2);
             
             
@@ -51,19 +51,37 @@ for(let i=0;i< idAry.length;i++){
    
 }
 
-function t01(IMG_HERE,NAME_HERE,photoNum,viewnum){
+function t01(IMG_HERE,NAME_HERE,photoNum,viewNum){
     let html =`
     
         <div class="col-3   mb-3" >
             <a href="step5.html?${NAME_HERE}" class="albumbox"> 
                 <div class="box1 position-relative hz-200 wz-200  pt-3 mt-3  mr-2 ">
-                    <img class="w-100 h-100 object-fit-cover position-absolute" src="https://images.pexels.com/photos/${IMG_HERE}/pexels-photo-${IMG_HERE}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" >
+                
+                     <div class="box3 position-relative hz-200 mt-3    ">
+                        <img class="w-100 h-100 object-fit-cover position-absolute" src="https://images.pexels.com/photos/${IMG_HERE}/pexels-photo-${IMG_HERE}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" >
+                     </div>
          
                 
-                    <div class="box2 img1  position-absolute linear bottom-0 text-light ms-2 mt-3  bg-1  " >
-                    
-                        <div class="text1  position-relative text-center bottom-0 w-100 fz-12 text-light">
-                        ${NAME_HERE}
+                    <div class="box2 img1  position-absolute  bottom-0 text-light  mt-5  bg-1  " >
+
+                        <div class="text1  position-relative text-center bottom-0 w-100 fz-12 text-light d-flex justify-content-center">
+                            <span>${NAME_HERE}</span>
+                        </div>
+                        <div class="textbox2 position-relative text-center bottom-0   top-4 fz-10 text-light d-flex justify-content-center ml-100">
+                                <div class="text  text-center bottom-0   text-light  ">
+                                    <span>${photoNum}張相片</span>
+                                </div>
+                                <div class=" dot ">
+                                    <span>·</span>
+                                </div>
+                                <div class="text position-relative text-center bottom-0 mb-100  top-4  text-light ">
+                                    <span>${viewNum}次檢視</span>
+                                </div>
+                                
+                        </div>
+                        <div class="icon3 d-flex justify-content-flexend ml-10">
+                                    <i class="fa fa-share text-white fz-20  position-relative mx-auto" aria-hidden="true"></i>
                         </div>
                     </div>
       
